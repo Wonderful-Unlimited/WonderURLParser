@@ -10,9 +10,22 @@
 
 @interface WonderURLParser : NSObject
 
-@property (strong, nonatomic) NSArray *variables;
+/**
+ *  This method is the designated initializer for the class.
+ *
+ *  @param url incoming URL.
+ *
+ *  @return instance of the class.
+ */
+- (instancetype)initWithURLString:(NSString *)url;
 
-- (id)initWithURLString:(NSString *)url;
+/**
+ *  Quering corresponding values of the designated variables.
+ *
+ *  @param varName variables name.
+ *
+ *  @return value of variable.
+ */
 - (NSString *)valueForVariable:(NSString *)varName;
 
 @end
